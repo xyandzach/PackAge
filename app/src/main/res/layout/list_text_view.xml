@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listViewTextView"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:fontFamily="@font/montserratregular"
+    android:gravity="center"
+    android:textColor="@color/black"
+    android:background="@drawable/listview_textview"
+    android:drawableLeft="@drawable/closedboxicon"
+    android:drawableRight="@drawable/dropdownicon"
+    android:drawablePadding="-40dp"/>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="324dp"
+        android:layout_height="435dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/homepagebox"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/trackingNumberInput"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/gray"
+            android:ems="10"
+            android:fontFamily="@font/montserratregular"
+            android:hint="Enter Tracking #"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="293dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="40dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/logo" />
+
+            <LinearLayout
+                android:id="@+id/outputView"
+                android:layout_width="275dp"
+                android:layout_height="290dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/outputbox"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <Button
+                    android:id="@+id/outputButton"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/lightbluebuttons"
+                    android:clickable="false"
+                    android:fontFamily="@font/montserratregular"
+                    android:textAllCaps="false" />
+
+                <TextView
+                    android:id="@+id/outputTextView"
+                    android:layout_width="255dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/addMyOrdersButton"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/lightbluebuttons"
+                    android:drawableRight="@drawable/addicon"
+                    android:drawablePadding="-40dp"
+                    android:fontFamily="@font/montserrat"
+                    android:onClick="addToMyOrders"
+                    android:paddingRight="45dp"
+                    android:text="Save to My Orders"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/trackButton"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttons"
+            android:fontFamily="@font/montserrat"
+            android:onClick="quickTrack"
+            android:text="Track"
+            android:textAllCaps="false"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/myOrdersButton"
+        android:layout_width="320dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/montserrat"
+        android:onClick="openMyOrders"
+        android:text="My Orders"
+        android:textAllCaps="false"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="320dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/montserrat"
+        android:onClick="openHistory"
+        android:text="History"
+        android:textAllCaps="false"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myOrdersButton" />
+
+    <ImageView
+        android:id="@+id/settingsCog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cog" />
+</androidx.constraintlayout.widget.ConstraintLayout>
